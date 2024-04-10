@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { apiMovies } from "../../services/apiMovies";
-import css from "./HomePage.module.css";
+
 
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../components/Loader/Loader";
@@ -31,7 +31,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className={css.movieMainPage}>
+    <div>
       <h1>Trending today</h1>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
@@ -41,7 +41,7 @@ const HomePage = () => {
         (movies.length ? (
           <MovieList movies={movies} />
         ) : (
-          <p className={css.infoMessage}>No movies to display!</p>
+          <p>No movies to display!</p>
         ))}
     </div>
   );

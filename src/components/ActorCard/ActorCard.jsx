@@ -1,9 +1,9 @@
 import { getImg } from "../../services/getImg";
-import css from "./ActorCard.module.css";
+
 
 const ActorCard = ({ actor }) => {
   return (
-    <div className={css.actorCard}>
+    <div>
       <div>
         <p>{actor.name}</p>
         <p>
@@ -15,9 +15,8 @@ const ActorCard = ({ actor }) => {
           </span>
         </p>
       </div>
-      <div className={css.actorCardContainer}>
+      <div>
         <img
-          className={css.actorImg}
           src={getImg(actor.profile_path)}
           width="120"
           alt={actor.name}
